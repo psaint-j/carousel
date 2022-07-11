@@ -35,8 +35,6 @@ const CardWrapper = styled.div`
 
 export default function Index({items}) {
 
-  console.log({items});
-
   const settings = {
     dots: false,
     infinite: false,
@@ -82,7 +80,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      items: data.program.filter((a) => a.thumnail.url)
-    }, // will be passed to the page component as props
+      items: data.program
+    },
   }
 }
